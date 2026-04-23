@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>local storage</h1>
+  <button onclick="setData()">sest data </button><button onclick="getdata()">get data </button><button onclick="removeData()">remove data</button>
+ <p id="id"></p>
+  <script>
+     function setData()
+     {
+      localStorage.setItem("name","69noob");
+     let val=document.getElementById("id");
+     val.innerHTML="the darta is set";
+
+     }
+     function getdata()
+     {
+      let v=localStorage.getItem("name");
+       document.getElementById("id").innerHTML=`data is here ${v}`;
+       let fin=parseInt(v)+1;
+       console.log(fin);
+      
+     }
+      function removeData()
+     {
+      localStorage.removeItem("name")
+      document.getElementById("id").innerHTML=" darta is removed";
+
+     }
+
+  </script>
+  
+</body>
+</html>
